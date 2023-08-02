@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+<title>Crabs.js</title>
+<link href="assets/icon.png" rel="icon" type="image/x-icon">
+<link href="style.css" rel="stylesheet" type="text/css" media="all">
+<script src="https://kit.fontawesome.com/1b784eb783.js" crossorigin="anonymous"></script>
+</head>
+<body id="body">
+
+    <div class="logo">
+    <a href="index.html" style="text-decoration:none;color:black;"><h2>🦀Crabs.js</h2></a>
+    </div>
+
+    <span id="crabsjs-02">🐟</span>
+    <span id="crabsjs-03">🚗</span>
+    <span id="crabsjs-04">👻</span>
+
+    <div class="dock">
+        <small>Add an object</small><br>
+        <button onclick="addCrab()">🦀 Crab</button>
+        <button onclick="addFish()">🐟 Fish</button>
+        <button onclick="addCar()">🚗 Car</button>
+        <button onclick="addGhost()">👻 Ghost</button>
+    </div>
+
+    <div class="links">
+    <i class="fa-brands fa-github"></i> <a href="index.html">See on Github</a> · Made by <a href="https://spicygame-studios.github.io">SpicyGame</a>
+    </div>
+
+    <script>
+        function addFish() {
+        const node = document.getElementById("crabsjs-02");
+        const clone = node.cloneNode(true);
+        document.getElementById("body").appendChild(clone); 
+        }
+
+        function addCar() {
+        const node = document.getElementById("crabsjs-03");
+        const clone = node.cloneNode(true);
+        document.getElementById("body").appendChild(clone); 
+        }
+
+        function addGhost() {
+        const node = document.getElementById("crabsjs-04");
+        const clone = node.cloneNode(true);
+        document.getElementById("body").appendChild(clone); 
+        }
+    </script>
+
+</body>
