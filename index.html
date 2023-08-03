@@ -8,7 +8,7 @@
 <body id="body">
 
     <div class="logo">
-    <a href="index.html" style="text-decoration:none;color:black;"><h2>🦀Crabs.js</h2></a>
+    <a href="index.html" style="text-decoration:none;"><h2>🦀Crabs.js</h2></a>
     </div>
 
     <span id="crabsjs-fish1" class="particle">🐟</span>
@@ -20,6 +20,7 @@
     <span id="crabsjs-car3" class="particle">🛻</span>
     <span id="crabsjs-car4" class="particle">🚌</span>
     <span id="crabsjs-car5" class="particle">🚚</span>
+    <span id="crabsjs-car6" class="particle">🚓</span>
 
     <span id="crabsjs-ghost" class="particle">👻</span>
 
@@ -67,34 +68,33 @@ var fishes = [Fish1, Fish2, Fish3]
     function Car1() {
         const node = document.getElementById("crabsjs-car1");
         const clone = node.cloneNode(true);
-        document.getElementById("body").appendChild(clone);
-    }
+        document.getElementById("body").appendChild(clone);}
     function Car2() {
         const node = document.getElementById("crabsjs-car2");
         const clone = node.cloneNode(true);
-        document.getElementById("body").appendChild(clone);
-    }
+        document.getElementById("body").appendChild(clone);}
     function Car3() {
         const node = document.getElementById("crabsjs-car3");
         const clone = node.cloneNode(true);
-        document.getElementById("body").appendChild(clone);
-    }
+        document.getElementById("body").appendChild(clone);}
     function Car4() {
         const node = document.getElementById("crabsjs-car4");
         const clone = node.cloneNode(true);
-        document.getElementById("body").appendChild(clone);
-    }
+        document.getElementById("body").appendChild(clone);}
     function Car5() {
         const node = document.getElementById("crabsjs-car5");
         const clone = node.cloneNode(true);
-        document.getElementById("body").appendChild(clone);
-    }
+        document.getElementById("body").appendChild(clone);}
+    function Car6() {
+        const node = document.getElementById("crabsjs-car6");
+        const clone = node.cloneNode(true);
+        document.getElementById("body").appendChild(clone);}
 
-var cars = [Car1, Car2, Car3, Car4, Car5]
+var cars = [Car1, Car2, Car3, Car4, Car5, Car6]
 
     function addCar() {
         var ranCar = Math.floor(Math.random() * cars.length)
-        cars.splice(ranCar-1, 1, Car1, Car2, Car3, Car4, Car5)[0]()
+        cars.splice(ranCar-1, 1, Car1, Car2, Car3, Car4, Car5, Car6)[0]()
     }
 
     function addGhost() {
