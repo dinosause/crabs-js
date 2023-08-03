@@ -14,7 +14,13 @@
     <span id="crabsjs-fish1" class="particle">🐟</span>
     <span id="crabsjs-fish2" class="particle">🐠</span>
     <span id="crabsjs-fish3" class="particle">🐡</span>
-    <span id="crabsjs-car" class="particle">🚗</span>
+    
+    <span id="crabsjs-car1" class="particle">🚗</span>
+    <span id="crabsjs-car2" class="particle">🚙</span>
+    <span id="crabsjs-car3" class="particle">🛻</span>
+    <span id="crabsjs-car4" class="particle">🚌</span>
+    <span id="crabsjs-car5" class="particle">🚚</span>
+
     <span id="crabsjs-ghost" class="particle">👻</span>
 
     <div class="dock">
@@ -56,10 +62,39 @@ var fishes = [Fish1, Fish2, Fish3]
         fishes.splice(ranFish-1, 1, Fish1, Fish2, Fish3)[0]()
     }
 
-    function addCar() {
-        const node = document.getElementById("crabsjs-car");
+//////////////////////
+
+    function Car1() {
+        const node = document.getElementById("crabsjs-car1");
         const clone = node.cloneNode(true);
-        document.getElementById("body").appendChild(clone); 
+        document.getElementById("body").appendChild(clone);
+    }
+    function Car2() {
+        const node = document.getElementById("crabsjs-car2");
+        const clone = node.cloneNode(true);
+        document.getElementById("body").appendChild(clone);
+    }
+    function Car3() {
+        const node = document.getElementById("crabsjs-car3");
+        const clone = node.cloneNode(true);
+        document.getElementById("body").appendChild(clone);
+    }
+    function Car4() {
+        const node = document.getElementById("crabsjs-car4");
+        const clone = node.cloneNode(true);
+        document.getElementById("body").appendChild(clone);
+    }
+    function Car5() {
+        const node = document.getElementById("crabsjs-car5");
+        const clone = node.cloneNode(true);
+        document.getElementById("body").appendChild(clone);
+    }
+
+var cars = [Car1, Car2, Car3, Car4, Car5]
+
+    function addCar() {
+        var ranCar = Math.floor(Math.random() * cars.length)
+        cars.splice(ranCar-1, 1, Car1, Car2, Car3, Car4, Car5)[0]()
     }
 
     function addGhost() {

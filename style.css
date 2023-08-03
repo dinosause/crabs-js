@@ -106,7 +106,23 @@ small {
 }
 
 /*Car*/
-#crabsjs-car {
+#crabsjs-car1 {
+    bottom: 0;
+    animation: drive 6s linear forwards;
+}
+#crabsjs-car2 {
+    bottom: 0;
+    animation: drive 6s linear forwards;
+}
+#crabsjs-car3 {
+    bottom: 0;
+    animation: drive 6s linear forwards;
+}
+#crabsjs-car4 {
+    bottom: 0;
+    animation: drive 6s linear forwards;
+}
+#crabsjs-car5 {
     bottom: 0;
     animation: drive 6s linear forwards;
 }
