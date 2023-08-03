@@ -11,40 +11,63 @@
     <a href="index.html" style="text-decoration:none;color:black;"><h2>🦀Crabs.js</h2></a>
     </div>
 
-    <span id="crabsjs-02">🐟</span>
-    <span id="crabsjs-03">🚗</span>
-    <span id="crabsjs-04">👻</span>
+    <span id="crabsjs-fish1" class="particle">🐟</span>
+    <span id="crabsjs-fish2" class="particle">🐠</span>
+    <span id="crabsjs-fish3" class="particle">🐡</span>
+    <span id="crabsjs-car" class="particle">🚗</span>
+    <span id="crabsjs-ghost" class="particle">👻</span>
 
     <div class="dock">
         <small>Add an object</small><br>
-        <button onclick="addCrab()">🦀 Crab</button>
-        <button onclick="addFish()">🐟 Fish</button>
-        <button onclick="addCar()">🚗 Car</button>
-        <button onclick="addGhost()">👻 Ghost</button>
+        <button disabled title="Coming soon!">🦀 Crab</button>
+        <button onclick="addFish()" title="Add a fish">🐟 Fish</button>
+        <button onclick="addCar()" title="Add a car">🚗 Car</button>
+        <button onclick="addGhost()" title="Add a scary ghost">👻 Ghost</button>
     </div>
 
     <div class="links">
     <i class="fa-brands fa-github"></i> <a href="index.html">See on Github</a> · Made by <a href="https://spicygame-studios.github.io">SpicyGame</a>
     </div>
 
-    <script>
-        function addFish() {
-        const node = document.getElementById("crabsjs-02");
+<script>
+    
+    function Fish1() {
+        const node = document.getElementById("crabsjs-fish1");
         const clone = node.cloneNode(true);
-        document.getElementById("body").appendChild(clone); 
-        }
+        document.getElementById("body").appendChild(clone);
+    }
 
-        function addCar() {
-        const node = document.getElementById("crabsjs-03");
+    function Fish2() {
+        const node = document.getElementById("crabsjs-fish2");
         const clone = node.cloneNode(true);
-        document.getElementById("body").appendChild(clone); 
-        }
+        document.getElementById("body").appendChild(clone);
+    }
 
-        function addGhost() {
-        const node = document.getElementById("crabsjs-04");
+    function Fish3() {
+        const node = document.getElementById("crabsjs-fish3");
+        const clone = node.cloneNode(true);
+        document.getElementById("body").appendChild(clone);
+    }
+
+var fishes = [Fish1, Fish2, Fish3]
+
+    function addFish() { 
+        var ranFish = Math.floor(Math.random() * fishes.length)
+        fishes.splice(ranFish-1, 1, Fish1, Fish2, Fish3)[0]()
+    }
+
+    function addCar() {
+        const node = document.getElementById("crabsjs-car");
         const clone = node.cloneNode(true);
         document.getElementById("body").appendChild(clone); 
-        }
+    }
+
+    function addGhost() {
+        const node = document.getElementById("crabsjs-ghost");
+        const clone = node.cloneNode(true);
+        document.getElementById("body").appendChild(clone); 
+    }
+
     </script>
 
 </body>

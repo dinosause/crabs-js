@@ -53,16 +53,14 @@ button:disabled {
     cursor: not-allowed;
 }
 
-a {
-    color: inherit;
-}
+a {color: inherit;}
 
 .links {
     position: fixed;
     right: 15px;
     top: 15px;
     color: grey;
-    user-select: none;
+    user-select: text;
     text-align: right;
 }
 
@@ -72,50 +70,62 @@ small {
 }
 
 /*code for objects*/
-#crabsjs-01 {
+
+.particle {
     font-size: 24px;
+    z-index: 9999;
     position: absolute;
+    user-select: none;
+}
+
+/*Crab*/
+#crabsjs-crab {
+    color: currentColor;
 }
 
 /*Fish*/
-#crabsjs-02 {
-    font-size: 24px;
-    z-index: 9999;
-    position: absolute;
-    user-select: none;
-    animation: swim 6s linear;
+#crabsjs-fish1 {
+    content: 🐟;
+    animation: drive 6s linear forwards, swim 2s linear infinite;
+    top: var(--fish-position);
+}
+#crabsjs-fish2 {
+    content: 🐠;
+    animation: drive 5.5s linear forwards, swim 2s linear infinite;
+    top: var(--fish-position);
+}
+#crabsjs-fish3 {
+    content: 🐡;
+    animation: drive 6.5s linear forwards, swim 2s linear infinite;
     top: var(--fish-position);
 }
 @keyframes swim {
-    from {right:0}
-    to {right:100%}
+    0% {transform: rotate(15deg);} 
+    50% {transform: rotate(-15deg);}
+    100% {transform: rotate(15deg);}
 }
 
 /*Car*/
-#crabsjs-03 {
-    z-index: 9999;
-    font-size: 24px;
-    position: absolute;
-    user-select: none;
+#crabsjs-car {
     bottom: 0;
-    animation: drive 6s linear;
+    animation: drive 6s linear forwards;
 }
 @keyframes drive {
-    from {right:0}
-    to {right: 100%}
+    from {right:0; visibility: visible;}
+    to {right: 100%; visibility: hidden;}
 }
 
 /*Ghost*/
-#crabsjs-04 {
+#crabsjs-ghost {
     z-index: 9999;
     font-size: 24px;
     position: absolute;
     user-select: none;
     left: var(--ghost-position);
-    animation: float 4s linear;
+    animation: float 4s linear forwards;
 }
 
 @keyframes float {
-    from {bottom: 0;}
-    to {bottom: 100%;}
+    from {bottom: 0; opacity: 100%; font-size: 24px;}
+    to {bottom: 100%; opacity: 0%; font-size: 20px;}
 }
