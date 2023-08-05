@@ -4,9 +4,10 @@ Crabs.js is an open-source set of particles including **fishes, cars, and ghosts
 ![A demo of the 'cars' animation](assets/demo-cars.gif)
 
 ## How to use
-1. Add `<link href="crabs.css" rel="stylesheet">` and `<script src="crabs.js"></script>` to the head of your webpage.
-2. In the body, add one of the HTML elements listed below. *(see "Types of Particles")*
-3. Finally, call the function associated with the element to summon it.
+1. Add `<link href="https://spicygame-studios.github.io/crabs-js/crabs.css" rel="stylesheet">` to the head of your webpage
+2. Then, add `<script src="https://spicygame-studios.github.io/crabs-js/crabs.js"></script>`
+3. In the body, add one of the HTML elements listed below. *(see "Types of Particles")*
+4. Finally, call the function associated with the element to summon it.
 
 ## Functions
 Call these functions to summon the associated elements. **These will only work if the original element(s) are present in your document.**
